@@ -1,0 +1,124 @@
+.input {
+  background-color: none;
+  border: none;
+  padding: 1em 6em;
+  margin: 0 auto;
+  text-transform: capitalize;
+  display: block;
+  border-radius: 10px;
+  text-align: center;
+  margin-top: 2em;
+  font-size: 16px;
+  border: 1px solid #dadada;
+}
+.input:focus {
+  outline: none;
+  border-color: #9ecaed;
+  box-shadow: 0 0 10px #9ecaed;
+}
+
+.input::placeholder {
+  text-align: center;
+  text-transform: none;
+}
+
+.info {
+  color: #ffffff;
+  text-align: center;
+  margin-top: 3em;
+}
+
+.title {
+  text-shadow: 3px 3px 0px rgba(0, 0, 0, 0.5);
+  -webkit-text-stroke: 1px black;
+  -webkit-text-fill-color: white;
+  font-size: 5rem;
+}
+
+.date {
+  text-shadow: 3px 3px 0px rgba(0, 0, 0, 0.5);
+  -webkit-text-stroke: 1px black;
+  -webkit-text-fill-color: white;
+  margin-bottom: 1em;
+}
+
+.weather {
+  background-color: rgba(128, 128, 128, 0.295);
+  min-width: 30%;
+  height: 40vh;
+  text-align: center;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  box-shadow: rgb(44, 62, 80) 0px 0px 15px 0px;
+}
+
+.weather h1 {
+  font-size: 5rem;
+  text-shadow: 3px 3px 0px rgba(0, 0, 0, 0.5);
+  -webkit-text-stroke: 1px black;
+  -webkit-text-fill-color: white;
+}
+
+.weatherState {
+  font-size: 2rem;
+  text-shadow: 3px 3px 0px rgba(0, 0, 0, 0.5);
+  -webkit-text-stroke: 1px black;
+  -webkit-text-fill-color: white;
+  margin-top: 0.6em;
+}
+
+.puff-in-center {
+  -webkit-animation: puff-in-center 0.7s cubic-bezier(0.47, 0, 0.745, 0.715)
+    both;
+  animation: puff-in-center 0.7s cubic-bezier(0.47, 0, 0.745, 0.715) both;
+}
+
+@-webkit-keyframes puff-in-center {
+  0% {
+    -webkit-transform: scale(2);
+    transform: scale(2);
+    -webkit-filter: blur(4px);
+    filter: blur(4px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-filter: blur(0px);
+    filter: blur(0px);
+    opacity: 1;
+  }
+}
+@keyframes puff-in-center {
+  0% {
+    -webkit-transform: scale(2);
+    transform: scale(2);
+    -webkit-filter: blur(4px);
+    filter: blur(4px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-filter: blur(0px);
+    filter: blur(0px);
+    opacity: 1;
+  }
+}
+
+@media (max-width: 399px) {
+  .weather h1 {
+    font-size: 3rem;
+  }
+  .title {
+    font-size: 3rem;
+  }
+  .date {
+    font-size: 1.2rem;
+  }
+  .input {
+    max-width: 100%;
+  }
+}
